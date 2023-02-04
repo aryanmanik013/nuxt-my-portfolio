@@ -1,29 +1,28 @@
 <template>
   <div>
-    <b-navbar type="dark" variant="dark" class="changeNav">
-      <b-navbar-nav>
-         <b-nav-item>
-            <NuxtLink to="/">Home</NuxtLink>
-        </b-nav-item>
-        <b-nav-item>
-            <NuxtLink to="/">Work</NuxtLink>
-        </b-nav-item>
+    <b-navbar toggleable="lg" type="dark" variant="dark" class="changeNav">
+      <b-navbar-brand></b-navbar-brand>
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-        <b-nav-item>
-            <NuxtLink to="/aboutus">About Us</NuxtLink>
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar type="dark" variant="dark" class="changeNav">
+          <b-navbar-nav>
+            <b-nav-item>
+              <NuxtLink to="/">Home</NuxtLink>
+            </b-nav-item>
+            <b-nav-item>
+              <NuxtLink to="/work">Work</NuxtLink>
+            </b-nav-item>
 
-        </b-nav-item>
-        <b-nav-item>
-            <NuxtLink to="/">Contact Us</NuxtLink>
-
-        </b-nav-item>
-      </b-navbar-nav>
-
-      <div class="ml-auto">
-        <b-navbar-nav>
-          <b-nav-item>Contact</b-nav-item>
-        </b-navbar-nav>
-      </div>
+            <b-nav-item>
+              <NuxtLink to="/aboutus">About Us</NuxtLink>
+            </b-nav-item>
+            <b-nav-item>
+              <NuxtLink to="/contactus">Contact Us</NuxtLink>
+            </b-nav-item>
+          </b-navbar-nav>
+        </b-navbar>
+      </b-collapse>
     </b-navbar>
   </div>
 </template>
@@ -34,7 +33,7 @@ export default {
 };
 </script>
 <style scoped>
-/deep/.nav-link a{
+/deep/.nav-link a {
   color: white !important;
 }
 </style>
